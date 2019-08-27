@@ -1,0 +1,21 @@
+{
+  "name": "jmek",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel src/index.pug",
+    "build": "parcel build src/index.pug",
+    "dev": "parcel -p 3000 watch src/index.pug"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.3.0",
+    "normalize.css": "^8.0.1",
+    "smoothscroll-polyfill": "^0.4.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "pug": "^2.0.4",
+    "sass": "^1.22.10"
+  }
+}

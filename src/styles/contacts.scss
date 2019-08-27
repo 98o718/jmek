@@ -1,0 +1,36 @@
+.contacts {
+  width: 100%;
+  padding: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #e5dbdc;
+  //   border-top: 1px solid #000;
+  //   background-color: white;
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .button,
+    .like-button {
+      padding: 15px 30px;
+      border-radius: 15px;
+      background-color: $red;
+      font-size: 1.2em;
+      text-decoration: none;
+      color: white;
+      box-shadow: $mid;
+    }
+
+    .button {
+      transition: 0.25s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

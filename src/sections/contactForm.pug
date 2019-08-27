@@ -1,0 +1,13 @@
+section.contact-form#contact-form
+    h1.heading Получи бесплатную консультацию
+    p.description Оставьте ваши контактные данные и мы свяжемся с вами для консультации!
+    .container
+        form.form(action="/")
+            span.input
+                label(for="") Имя
+                input(type="text", name="name" required placeholder="Как мы можем к Вам обращаться")
+            span.input
+                label(for="") Телефон
+                input(type="tel", name="tel" required placeholder="Введите номер телефона")
+            button.submit(type="submit") ЗАПИСАТЬСЯ
+        img.pic(src="./assets/pic.png", alt="")

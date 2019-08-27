@@ -1,0 +1,28 @@
+.about {
+  background-color: white;
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  box-sizing: border-box;
+
+  .portrait {
+    margin-right: 25px;
+    border-radius: 5px;
+    box-shadow: $mid;
+  }
+
+  .info {
+    h1 {
+      font-weight: 900;
+      font-size: 2.5em;
+      // font-style: italic;
+    }
+
+    p {
+      width: 500px;
+      color: #8c8f94;
+    }
+  }
+}

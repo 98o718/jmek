@@ -1,0 +1,25 @@
+.additional {
+  background-color: white;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  .grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+
+    .item {
+      width: 300px;
+      box-shadow: $mid;
+      border-radius: 15px;
+      padding: 30px;
+      margin: 30px;
+    }
+  }
+}

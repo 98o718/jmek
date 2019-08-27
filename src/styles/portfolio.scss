@@ -1,0 +1,35 @@
+.portfolio {
+  width: 100%;
+  padding: 50px;
+  box-sizing: border-box;
+  background-color: #d4aeb0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .description {
+    color: black;
+  }
+
+  .glide {
+    width: 100%;
+  }
+
+  .glide__slide {
+    height: 400px;
+    text-align: center;
+    transition: transform 0.25s ease;
+
+    &--active {
+      transform: scale(1.2);
+    }
+  }
+
+  .item {
+    height: 200px;
+  }
+
+  .photo {
+    height: 100%;
+  }
+}

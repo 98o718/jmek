@@ -1,0 +1,27 @@
+.reviews {
+  width: 100%;
+  padding: 30px;
+  background-color: white;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .glide2 {
+    width: 100%;
+
+    .glide__slide {
+      height: 200px;
+      text-align: center;
+      transition: transform 0.25s ease;
+
+      &--active {
+        z-index: 999;
+      }
+    }
+
+    .photo {
+      height: 200px;
+    }
+  }
+}

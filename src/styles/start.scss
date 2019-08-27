@@ -1,0 +1,32 @@
+.start {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffe7e7;
+  //   padding: 15px;
+
+  .photos {
+    img {
+      height: 550px;
+      margin: 15px;
+      border-radius: 5px;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+  }
+
+  .iphone {
+    position: absolute;
+    height: 60%;
+    bottom: 15px;
+    left: 50px;
+  }
+
+  p {
+    width: 600px;
+    text-align: center;
+    color: #8c8f94;
+  }
+}

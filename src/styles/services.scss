@@ -1,0 +1,56 @@
+.services {
+  width: 100%;
+  background-color: white;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+
+  .description {
+    margin-bottom: 50px;
+  }
+
+  .tariffs {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    .item {
+      width: 300px;
+      //   border: 1px solid #8c8f94;
+      box-shadow: $mid;
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+      border-radius: 15px;
+      align-items: center;
+      margin-right: 30px;
+      &:last-child {
+        margin-right: 0;
+      }
+
+      .description {
+        margin-bottom: 5px;
+      }
+
+      .title {
+        font-size: 1.5em;
+        margin: 15px;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .price {
+        width: 100px;
+        text-align: center;
+        background-color: #840000;
+        color: white;
+        padding: 15px;
+        font-weight: bold;
+        border-radius: 15px;
+        box-shadow: $mid;
+      }
+    }
+  }
+}
