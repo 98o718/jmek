@@ -4041,20 +4041,37 @@ var _glide = _interopRequireDefault(require("@glidejs/glide"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-new _glide.default('.glide', {
-  type: 'carousel',
-  perView: 4,
-  focusAt: 'center',
-  autoplay: 4000,
-  animationTimingFunc: 'ease'
-}).mount();
-new _glide.default('.glide2', {
-  type: 'carousel',
-  perView: 3,
-  focusAt: 'center',
-  autoplay: 4000,
-  animationTimingFunc: 'ease'
-}).mount();
+if (window.matchMedia('(max-width: 575.98px)').matches) {
+  new _glide.default('.glide', {
+    type: 'carousel',
+    perView: 1,
+    focusAt: 'center',
+    autoplay: 4000,
+    animationTimingFunc: 'ease'
+  }).mount();
+  new _glide.default('.glide2', {
+    type: 'carousel',
+    perView: 1,
+    focusAt: 'center',
+    autoplay: 4000,
+    animationTimingFunc: 'ease'
+  }).mount();
+} else {
+  new _glide.default('.glide', {
+    type: 'carousel',
+    perView: 4,
+    focusAt: 'center',
+    autoplay: 4000,
+    animationTimingFunc: 'ease'
+  }).mount();
+  new _glide.default('.glide2', {
+    type: 'carousel',
+    perView: 3,
+    focusAt: 'center',
+    autoplay: 4000,
+    animationTimingFunc: 'ease'
+  }).mount();
+}
 
 _smoothscrollPolyfill.default.polyfill();
 

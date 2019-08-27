@@ -68,3 +68,25 @@
     }
   }
 }
+
+@media (max-width: 575.98px) {
+  .contact-form {
+    padding: 15px;
+
+    .container {
+      flex-direction: column;
+      box-sizing: border-box;
+      align-items: center;
+
+      img {
+        display: none;
+      }
+
+      .form {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+      }
+    }
+  }
+}

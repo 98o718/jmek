@@ -29,3 +29,21 @@
     align-self: flex-end;
   }
 }
+
+@media (max-width: 575.98px) {
+  .faq {
+    padding: 15px;
+    align-items: center;
+
+    .question,
+    .answer {
+      width: 100%;
+      box-sizing: border-box;
+      margin: 7px;
+    }
+
+    .answer {
+      align-self: auto;
+    }
+  }
+}

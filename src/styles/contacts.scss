@@ -34,3 +34,10 @@
     }
   }
 }
+
+@media (max-width: 575.98px) {
+  .contacts {
+    padding: 15px;
+    flex-direction: column;
+  }
+}

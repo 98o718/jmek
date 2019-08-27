@@ -7,6 +7,10 @@
   justify-content: center;
   box-sizing: border-box;
 
+  .heading {
+    display: none;
+  }
+
   .portrait {
     margin-right: 25px;
     border-radius: 5px;
@@ -23,6 +27,40 @@
     p {
       width: 500px;
       color: #8c8f94;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about {
+    padding: 15px;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+
+    .heading {
+      display: block;
+    }
+
+    .portrait {
+      width: 80%;
+      margin-right: 0;
+    }
+
+    .info {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+      box-sizing: border-box;
+
+      h1 {
+        display: none;
+      }
+
+      p {
+        width: 100%;
+      }
     }
   }
 }

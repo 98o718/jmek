@@ -33,3 +33,15 @@
     height: 100%;
   }
 }
+
+@media (max-width: 575.98px) {
+  .portfolio {
+    padding: 15px;
+
+    .glide__slide {
+      &--active {
+        transform: unset;
+      }
+    }
+  }
+}

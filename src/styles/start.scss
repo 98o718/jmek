@@ -7,6 +7,10 @@
   background-color: #ffe7e7;
   //   padding: 15px;
 
+  .heading {
+    display: none;
+  }
+
   .photos {
     img {
       height: 550px;
@@ -28,5 +32,36 @@
     width: 600px;
     text-align: center;
     color: #8c8f94;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .start {
+    flex-direction: column-reverse;
+    padding: 15px;
+    box-sizing: border-box;
+
+    .heading {
+      display: block;
+    }
+
+    p {
+      width: 100%;
+    }
+
+    .iphone {
+      position: relative;
+      width: 80%;
+      height: auto;
+      bottom: unset;
+      left: unset;
+      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.19));
+    }
+
+    .photos {
+      text-align: center;
+      width: 100%;
+      display: none;
+    }
   }
 }

@@ -23,3 +23,30 @@
     }
   }
 }
+
+@media (max-width: 575.98px) {
+  .additional {
+    padding: 15px;
+
+    .heading {
+      font-size: 1.8em;
+    }
+
+    .grid {
+      flex-direction: column;
+      width: 100%;
+      margin-top: 15px;
+
+      .item {
+        width: 90%;
+        margin: 0;
+        padding: 15px;
+        margin-bottom: 30px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

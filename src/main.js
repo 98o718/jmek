@@ -1,21 +1,39 @@
 import smoothscroll from 'smoothscroll-polyfill'
 import Glide from '@glidejs/glide'
 
-new Glide('.glide', {
-  type: 'carousel',
-  perView: 4,
-  focusAt: 'center',
-  autoplay: 4000,
-  animationTimingFunc: 'ease',
-}).mount()
+if (window.matchMedia('(max-width: 575.98px)').matches) {
+  new Glide('.glide', {
+    type: 'carousel',
+    perView: 1,
+    focusAt: 'center',
+    autoplay: 4000,
+    animationTimingFunc: 'ease',
+  }).mount()
 
-new Glide('.glide2', {
-  type: 'carousel',
-  perView: 3,
-  focusAt: 'center',
-  autoplay: 4000,
-  animationTimingFunc: 'ease',
-}).mount()
+  new Glide('.glide2', {
+    type: 'carousel',
+    perView: 1,
+    focusAt: 'center',
+    autoplay: 4000,
+    animationTimingFunc: 'ease',
+  }).mount()
+} else {
+  new Glide('.glide', {
+    type: 'carousel',
+    perView: 4,
+    focusAt: 'center',
+    autoplay: 4000,
+    animationTimingFunc: 'ease',
+  }).mount()
+
+  new Glide('.glide2', {
+    type: 'carousel',
+    perView: 3,
+    focusAt: 'center',
+    autoplay: 4000,
+    animationTimingFunc: 'ease',
+  }).mount()
+}
 
 smoothscroll.polyfill()
 

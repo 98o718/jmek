@@ -149,3 +149,22 @@
     background: inherit;
   }
 }
+
+@media (max-width: 575.98px) {
+  .how-we-work {
+    padding: 15px;
+
+    .heading {
+      text-align: center;
+    }
+
+    .container {
+      flex-direction: column;
+
+      .hexagon {
+        margin: 86.6px 0;
+        // margin-bottom: 100px;
+      }
+    }
+  }
+}

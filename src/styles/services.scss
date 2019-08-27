@@ -54,3 +54,27 @@
     }
   }
 }
+
+@media (max-width: 575.98px) {
+  .services {
+    padding: 15px;
+
+    .heading {
+      text-align: center;
+    }
+
+    .tariffs {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+
+      .item {
+        width: 90%;
+        margin-right: 0;
+        padding: 15px;
+        box-sizing: border-box;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

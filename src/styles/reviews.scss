@@ -20,8 +20,31 @@
       }
     }
 
+    .glide__slides {
+      align-items: center;
+    }
+
     .photo {
-      height: 200px;
+      object-fit: contain;
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .reviews {
+    padding: 15px;
+
+    .glide__slide {
+      height: unset;
+      align-items: center;
+      display: flex;
+      align-items: center;
+    }
+
+    .photo {
+      height: unset;
+      width: 100%;
     }
   }
 }
