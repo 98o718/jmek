@@ -2,4 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/assmminf/public_html/
+    - /bin/rm -r /home/assmminf/public_html/*
     - /bin/cp -R dist/* $DEPLOYPATH
