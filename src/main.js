@@ -3,39 +3,40 @@ import Glide from '@glidejs/glide'
 
 // Слайдеры
 
-if (window.matchMedia('(max-width: 575.98px)').matches) {
-  new Glide('.glide', {
-    type: 'carousel',
-    perView: 1,
-    focusAt: 'center',
-    autoplay: 4000,
-    animationTimingFunc: 'ease',
-  }).mount()
+new Glide('.glide', {
+  type: 'carousel',
+  perView: 4,
+  focusAt: 'center',
+  autoplay: 4000,
+  animationTimingFunc: 'ease',
+  breakpoints: {
+    640: {
+      perView: 1,
+    },
+    940: {
+      perView: 2,
+    },
+    1300: {
+      perView: 3,
+    },
+  },
+}).mount()
 
-  new Glide('.glide2', {
-    type: 'carousel',
-    perView: 1,
-    focusAt: 'center',
-    autoplay: 4000,
-    animationTimingFunc: 'ease',
-  }).mount()
-} else {
-  new Glide('.glide', {
-    type: 'carousel',
-    perView: 4,
-    focusAt: 'center',
-    autoplay: 4000,
-    animationTimingFunc: 'ease',
-  }).mount()
-
-  new Glide('.glide2', {
-    type: 'carousel',
-    perView: 3,
-    focusAt: 'center',
-    autoplay: 4000,
-    animationTimingFunc: 'ease',
-  }).mount()
-}
+new Glide('.glide2', {
+  type: 'carousel',
+  perView: 3,
+  focusAt: 'center',
+  autoplay: 4000,
+  animationTimingFunc: 'ease',
+  breakpoints: {
+    850: {
+      perView: 1,
+    },
+    1140: {
+      perView: 2,
+    },
+  },
+}).mount()
 
 // Меню
 

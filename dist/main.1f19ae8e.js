@@ -4042,38 +4042,39 @@ var _glide = _interopRequireDefault(require("@glidejs/glide"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Слайдеры
-if (window.matchMedia('(max-width: 575.98px)').matches) {
-  new _glide.default('.glide', {
-    type: 'carousel',
-    perView: 1,
-    focusAt: 'center',
-    autoplay: 4000,
-    animationTimingFunc: 'ease'
-  }).mount();
-  new _glide.default('.glide2', {
-    type: 'carousel',
-    perView: 1,
-    focusAt: 'center',
-    autoplay: 4000,
-    animationTimingFunc: 'ease'
-  }).mount();
-} else {
-  new _glide.default('.glide', {
-    type: 'carousel',
-    perView: 4,
-    focusAt: 'center',
-    autoplay: 4000,
-    animationTimingFunc: 'ease'
-  }).mount();
-  new _glide.default('.glide2', {
-    type: 'carousel',
-    perView: 3,
-    focusAt: 'center',
-    autoplay: 4000,
-    animationTimingFunc: 'ease'
-  }).mount();
-} // Меню
-
+new _glide.default('.glide', {
+  type: 'carousel',
+  perView: 4,
+  focusAt: 'center',
+  autoplay: 4000,
+  animationTimingFunc: 'ease',
+  breakpoints: {
+    640: {
+      perView: 1
+    },
+    940: {
+      perView: 2
+    },
+    1300: {
+      perView: 3
+    }
+  }
+}).mount();
+new _glide.default('.glide2', {
+  type: 'carousel',
+  perView: 3,
+  focusAt: 'center',
+  autoplay: 4000,
+  animationTimingFunc: 'ease',
+  breakpoints: {
+    850: {
+      perView: 1
+    },
+    1140: {
+      perView: 2
+    }
+  }
+}).mount(); // Меню
 
 var toggle = true;
 var menuToggle = document.querySelector('.mob-menu-toggle');
@@ -4200,7 +4201,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53143" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55373" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
