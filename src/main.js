@@ -1,6 +1,8 @@
 import smoothscroll from 'smoothscroll-polyfill'
 import Glide from '@glidejs/glide'
 
+// Слайдеры
+
 if (window.matchMedia('(max-width: 575.98px)').matches) {
   new Glide('.glide', {
     type: 'carousel',
@@ -35,21 +37,7 @@ if (window.matchMedia('(max-width: 575.98px)').matches) {
   }).mount()
 }
 
-smoothscroll.polyfill()
-
-const smoothScrollTo = anchor => {
-  let el = document.querySelector(anchor)
-
-  const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset
-  const yOffset = -50
-
-  window.scrollTo({
-    top: yCoordinate + yOffset,
-    behavior: 'smooth',
-  })
-}
-
-const scrollLinks = document.querySelectorAll('.scroll-link')
+// Меню
 
 let toggle = true
 
@@ -90,6 +78,24 @@ menuToggle.addEventListener('click', e => {
   showMenu()
 })
 
+// Плавный скролл
+
+smoothscroll.polyfill()
+
+const smoothScrollTo = anchor => {
+  let el = document.querySelector(anchor)
+
+  const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset
+  const yOffset = -50
+
+  window.scrollTo({
+    top: yCoordinate + yOffset,
+    behavior: 'smooth',
+  })
+}
+
+const scrollLinks = document.querySelectorAll('.scroll-link')
+
 scrollLinks.forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault()
@@ -113,4 +119,38 @@ scrollLinks.forEach(link => {
       smoothScrollTo(anchor)
     }
   })
+})
+
+// Контактная форма
+
+const button = document.querySelector('.submit')
+
+const form = document.querySelector('#form')
+
+const submit = form.addEventListener('submit', e => {
+  e.preventDefault()
+
+  button.disabled = true
+
+  const { name, tel } = {
+    name: form.name.value,
+    tel: form.tel.value,
+  }
+
+  const data = new FormData()
+
+  data.append('name', name)
+  data.append('tel', tel)
+
+  fetch('mail.php', {
+    method: 'POST',
+    body: data,
+  }).then(res =>
+    res.json().then(json => {
+      if (json.name === name) {
+        alert('Заявка принята!')
+        button.disabled = false
+      }
+    })
+  )
 })

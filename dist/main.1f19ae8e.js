@@ -4041,6 +4041,7 @@ var _glide = _interopRequireDefault(require("@glidejs/glide"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// Слайдеры
 if (window.matchMedia('(max-width: 575.98px)').matches) {
   new _glide.default('.glide', {
     type: 'carousel',
@@ -4071,21 +4072,9 @@ if (window.matchMedia('(max-width: 575.98px)').matches) {
     autoplay: 4000,
     animationTimingFunc: 'ease'
   }).mount();
-}
+} // Меню
 
-_smoothscrollPolyfill.default.polyfill();
 
-var smoothScrollTo = function smoothScrollTo(anchor) {
-  var el = document.querySelector(anchor);
-  var yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-  var yOffset = -50;
-  window.scrollTo({
-    top: yCoordinate + yOffset,
-    behavior: 'smooth'
-  });
-};
-
-var scrollLinks = document.querySelectorAll('.scroll-link');
 var toggle = true;
 var menuToggle = document.querySelector('.mob-menu-toggle');
 var menu = document.querySelector('.mob-menu');
@@ -4119,7 +4108,21 @@ backButton.addEventListener('click', function (e) {
 menuToggle.addEventListener('click', function (e) {
   e.preventDefault();
   showMenu();
-});
+}); // Плавный скролл
+
+_smoothscrollPolyfill.default.polyfill();
+
+var smoothScrollTo = function smoothScrollTo(anchor) {
+  var el = document.querySelector(anchor);
+  var yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+  var yOffset = -50;
+  window.scrollTo({
+    top: yCoordinate + yOffset,
+    behavior: 'smooth'
+  });
+};
+
+var scrollLinks = document.querySelectorAll('.scroll-link');
 scrollLinks.forEach(function (link) {
   link.addEventListener('click', function (e) {
     e.preventDefault();
@@ -4140,6 +4143,33 @@ scrollLinks.forEach(function (link) {
       window.history.pushState('', '', anchor);
       smoothScrollTo(anchor);
     }
+  });
+}); // Контактная форма
+
+var button = document.querySelector('.submit');
+var form = document.querySelector('#form');
+var submit = form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  button.disabled = true;
+  var _name$tel = {
+    name: form.name.value,
+    tel: form.tel.value
+  },
+      name = _name$tel.name,
+      tel = _name$tel.tel;
+  var data = new FormData();
+  data.append('name', name);
+  data.append('tel', tel);
+  fetch('mail.php', {
+    method: 'POST',
+    body: data
+  }).then(function (res) {
+    return res.json().then(function (json) {
+      if (json.name === name) {
+        alert('Заявка принята!');
+        button.disabled = false;
+      }
+    });
   });
 });
 },{"smoothscroll-polyfill":"../node_modules/smoothscroll-polyfill/dist/smoothscroll.js","@glidejs/glide":"../node_modules/@glidejs/glide/dist/glide.esm.js"}],"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
