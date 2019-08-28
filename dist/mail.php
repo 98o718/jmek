@@ -3,7 +3,6 @@
 use PHPMailer\PHPMailer\PHPMailer;
 
 header('Content-Type: application/json');
-echo json_encode($_POST);
 
 if (array_key_exists('email', $_POST)) {
     require './PHPMailer.php';
@@ -36,6 +35,7 @@ if (array_key_exists('email', $_POST)) {
     $mail->msgHTML($body);
     
     $mail->send();
+    echo json_encode($_POST);
 }
 
 ?>
