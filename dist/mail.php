@@ -20,7 +20,7 @@ if (array_key_exists('email', $_POST)) {
     $mail->Host = 'ssl://smtp.mail.ru';
     $mail->Port = 465;
     $mail->Username = 'contact@assmm.info';
-    $mail->Password = 'T22k=ujBj';
+    $mail->Password = 'TPyPyVldr19(';
     
     // От кого
     $mail->setFrom('contact@assmm.info', 'ASSMM');		
