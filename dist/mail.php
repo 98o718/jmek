@@ -4,7 +4,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 
 header('Content-Type: application/json');
 
-if (array_key_exists('email', $_POST)) {
+if (array_key_exists('name', $_POST)) {
     require './PHPMailer.php';
     require './SMTP.php';
     
