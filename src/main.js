@@ -161,7 +161,7 @@ const submit = form.addEventListener('submit', e => {
   }).then(res =>
     res.json().then(json => {
       if (json.name === name) {
-        alert('Заявка принята!')
+        alert('Заявка отправлена!')
         button.disabled = false
       }
     })
