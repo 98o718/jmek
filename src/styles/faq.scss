@@ -20,7 +20,7 @@
   }
 
   .answer {
-    background-color: #dbc5c6;
+    background-color: rgba(lighten($red, 15), 0.5);
     width: 600px;
     border-radius: 15px;
     box-shadow: $mid;
