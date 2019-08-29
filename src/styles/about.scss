@@ -7,6 +7,12 @@
   justify-content: center;
   box-sizing: border-box;
 
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
   .heading {
     display: none;
   }
@@ -15,6 +21,7 @@
     margin-right: 25px;
     border-radius: 5px;
     box-shadow: $mid;
+    width: 430px;
   }
 
   .info {
@@ -35,6 +42,11 @@
   .about {
     flex-direction: column;
     align-items: center;
+
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
 
     .heading {
       display: block;

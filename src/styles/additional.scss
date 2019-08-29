@@ -20,6 +20,20 @@
       border-radius: 15px;
       padding: 30px;
       margin: 30px;
+      display: flex;
+      flex-direction: column;
+
+      .price {
+        padding: 15px;
+        width: 80px;
+        border-radius: 15px;
+        background-color: $red;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        align-self: center;
+        box-shadow: $mid;
+      }
     }
   }
 }

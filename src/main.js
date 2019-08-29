@@ -1,5 +1,7 @@
 import smoothscroll from 'smoothscroll-polyfill'
 import Glide from '@glidejs/glide'
+import baguetteBox from 'baguettebox.js'
+import IMask from 'imask'
 
 // Слайдеры
 
@@ -37,6 +39,16 @@ new Glide('.glide2', {
     },
   },
 }).mount()
+
+// Маска ввода
+
+const phoneMask = IMask(document.querySelector('.tel-num'), {
+  mask: '+{7}(000)000-00-00',
+})
+
+// lightbox
+
+baguetteBox.run('.glide__slide')
 
 // Меню
 

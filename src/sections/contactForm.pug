@@ -4,10 +4,10 @@ section.contact-form#contact-form
     .container
         form.form#form(action="/")
             span.input
-                label(for="") Имя
+                label Имя
                 input(type="text", name="name" required placeholder="Как к Вам обращаться")
             span.input
-                label(for="") Телефон
-                input(type="tel", name="tel" required placeholder="Введите номер телефона")
+                label Телефон
+                input.tel-num(type="tel", name="tel" required placeholder="Введите номер телефона")
             button.submit(type="submit") ЗАПИСАТЬСЯ
         img.pic(src="./assets/pic.png", alt="")
