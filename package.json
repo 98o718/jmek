@@ -20,7 +20,7 @@
     "cssnano": "^4.1.10",
     "parcel-plugin-asset-copier": "^1.0.0",
     "parcel-plugin-nuke-dist": "^1.0.0",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "sass": "^1.22.10"
   },
   "assetsPath": "src/php"
